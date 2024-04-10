@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_view_exam_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/exam_image"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:id="@+id/text_view_exam_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/image_view_exam_icon"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/image_view_exam_icon"
+            android:text="the app title" />
+
+        <TextView
+            android:id="@+id/text_view_project_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_exam_title"
+            android:layout_toEndOf="@id/image_view_exam_icon"
+            android:text="this is the description of the project" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
