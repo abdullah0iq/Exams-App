@@ -33,6 +33,11 @@ android {
 
 dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
+    val sqlite_version = "2.4.0"
+
+    // Java language implementation
+    implementation("androidx.sqlite:sqlite:$sqlite_version")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
