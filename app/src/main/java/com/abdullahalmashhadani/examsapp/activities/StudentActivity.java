@@ -25,40 +25,41 @@ public class StudentActivity extends AppCompatActivity implements RecycleViewInt
     MyDatabaseHelper db;
     ArrayList<Exam> exams;
     RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_student);
 
+        loadData();
+
+
+    }
+    protected void onResume() {
+
+        super.onResume();
+        loadData();
+    }
+
+    private void loadData() {
         recyclerView = findViewById(R.id.rvExams_forStudent);
 
 
         db = new MyDatabaseHelper(StudentActivity.this);
-        exams = new ArrayList<>();
+        exams = db.get_exams();
 
-
-        Cursor cursor = db.get_exams();
-        if (cursor != null) {
-            while (cursor.moveToNext()) {
-                @SuppressLint("Range") String title = cursor.getString(cursor.getColumnIndex("title"));
-                @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("_id"));
-                exams.add(new Exam(id,title, new ArrayList<Question>()));
-            }
-        }
 
         ExamAdapter examAdapter = new ExamAdapter(this, StudentActivity.this, exams);
         recyclerView.setAdapter(examAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
-
     }
 
     @Override
     public void onExamClick(int pos) {
+        if (exams.get(pos).getIs_taken()==1){return;}
         Intent intent = new Intent(StudentActivity.this, ExamTakingActivity.class);
-        intent.putExtra("pos",exams.get(pos).getId());
+        intent.putExtra("pos", exams.get(pos).getId());
         startActivity(intent);
     }
 }

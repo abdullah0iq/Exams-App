@@ -70,5 +70,13 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/delete_all_exams_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_view_teacher"
+        android:layout_margin="20dp"
+        android:text="Delete all exams"/>
+
 
 </RelativeLayout>

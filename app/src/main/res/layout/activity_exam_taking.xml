@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_new_exam"
+    android:id="@+id/activity_exam_taking"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -30,7 +30,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/question_number_widget1"
+                    android:id="@+id/question_number_submit1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -39,21 +39,21 @@
                     android:text="Q1\"
                     android:textSize="20dp" />
 
-                <EditText
-                    android:id="@+id/question_text_widget1"
+                <TextView
+                    android:id="@+id/question_text_submit1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/question_number_widget1"
-                    android:layout_toEndOf="@id/question_number_widget1"
-                    android:hint="Enter Question here"
+                    android:layout_alignTop="@id/question_number_submit1"
+                    android:layout_toEndOf="@id/question_number_submit1"
+
 
                     />
 
                 <RadioGroup
-                    android:id="@+id/radioGroup1"
+                    android:id="@+id/radioGroup1_exam_taking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_text_widget1"
+                    android:layout_below="@id/question_text_submit1"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -82,7 +82,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/question_number_widget2"
+                    android:id="@+id/question_number_submit2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -91,21 +91,20 @@
                     android:text="Q2\"
                     android:textSize="20dp" />
 
-                <EditText
-                    android:id="@+id/question_text_widget2"
+                <TextView
+                    android:id="@+id/question_text_submit2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/question_number_widget2"
-                    android:layout_toEndOf="@id/question_number_widget2"
-                    android:hint="Enter Question here"
+                    android:layout_alignTop="@id/question_number_submit2"
+                    android:layout_toEndOf="@id/question_number_submit2"
 
                     />
 
                 <RadioGroup
-                    android:id="@+id/radioGroup2"
+                    android:id="@+id/radioGroup2_exam_taking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_text_widget2"
+                    android:layout_below="@id/question_text_submit2"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -134,7 +133,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/question_number_widget3"
+                    android:id="@+id/question_number_submit3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -143,21 +142,21 @@
                     android:text="Q3\"
                     android:textSize="20dp" />
 
-                <EditText
-                    android:id="@+id/question_text_widget3"
+                <TextView
+                    android:id="@+id/question_text_submit3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/question_number_widget3"
-                    android:layout_toEndOf="@id/question_number_widget3"
-                    android:hint="Enter Question here"
+                    android:layout_alignTop="@id/question_number_submit3"
+                    android:layout_toEndOf="@id/question_number_submit3"
+
 
                     />
 
                 <RadioGroup
-                    android:id="@+id/radioGroup3"
+                    android:id="@+id/radioGroup3_exam_taking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_text_widget3"
+                    android:layout_below="@id/question_text_submit3"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -186,7 +185,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/question_number_widget4"
+                    android:id="@+id/question_number_submit4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -195,21 +194,20 @@
                     android:text="Q4\"
                     android:textSize="20dp" />
 
-                <EditText
-                    android:id="@+id/question_text_widget4"
+                <TextView
+                    android:id="@+id/question_text_submit4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/question_number_widget4"
-                    android:layout_toEndOf="@id/question_number_widget4"
-                    android:hint="Enter Question here"
+                    android:layout_alignTop="@id/question_number_submit4"
+                    android:layout_toEndOf="@id/question_number_submit4"
 
                     />
 
                 <RadioGroup
-                    android:id="@+id/radioGroup4"
+                    android:id="@+id/radioGroup4_exam_taking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_text_widget4"
+                    android:layout_below="@id/question_text_submit4"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -238,7 +236,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/question_number_widget5"
+                    android:id="@+id/question_number_submit5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -247,21 +245,20 @@
                     android:text="Q5\"
                     android:textSize="20dp" />
 
-                <EditText
-                    android:id="@+id/question_text_widget5"
+                <TextView
+                    android:id="@+id/question_text_submit5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/question_number_widget5"
-                    android:layout_toEndOf="@id/question_number_widget5"
-                    android:hint="Enter Question here"
+                    android:layout_alignTop="@id/question_number_submit5"
+                    android:layout_toEndOf="@id/question_number_submit5"
 
                     />
 
                 <RadioGroup
-                    android:id="@+id/radioGroup5"
+                    android:id="@+id/radioGroup5_exam_taking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_text_widget5"
+                    android:layout_below="@id/question_text_submit5"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -290,7 +287,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/question_number_widget6"
+                    android:id="@+id/question_number_submit6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -299,21 +296,20 @@
                     android:text="Q6\"
                     android:textSize="20dp" />
 
-                <EditText
-                    android:id="@+id/question_text_widget6"
+                <TextView
+                    android:id="@+id/question_text_submit6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/question_number_widget6"
-                    android:layout_toEndOf="@id/question_number_widget6"
-                    android:hint="Enter Question here"
+                    android:layout_alignTop="@id/question_number_submit6"
+                    android:layout_toEndOf="@id/question_number_submit6"
 
                     />
 
                 <RadioGroup
-                    android:id="@+id/radioGroup6"
+                    android:id="@+id/radioGroup6_exam_taking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_text_widget6"
+                    android:layout_below="@id/question_text_submit6"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -342,7 +338,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/question_number_widget7"
+                    android:id="@+id/question_number_submit7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -351,21 +347,20 @@
                     android:text="Q7\"
                     android:textSize="20dp" />
 
-                <EditText
-                    android:id="@+id/question_text_widget7"
+                <TextView
+                    android:id="@+id/question_text_submit7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/question_number_widget7"
-                    android:layout_toEndOf="@id/question_number_widget7"
-                    android:hint="Enter Question here"
+                    android:layout_alignTop="@id/question_number_submit7"
+                    android:layout_toEndOf="@id/question_number_submit7"
 
                     />
 
                 <RadioGroup
-                    android:id="@+id/radioGroup7"
+                    android:id="@+id/radioGroup7_exam_taking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_text_widget7"
+                    android:layout_below="@id/question_text_submit7"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -394,7 +389,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/question_number_widget8"
+                    android:id="@+id/question_number_submit8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -403,21 +398,20 @@
                     android:text="Q8\"
                     android:textSize="20dp" />
 
-                <EditText
-                    android:id="@+id/question_text_widget8"
+                <TextView
+                    android:id="@+id/question_text_submit8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/question_number_widget8"
-                    android:layout_toEndOf="@id/question_number_widget8"
-                    android:hint="Enter Question here"
+                    android:layout_alignTop="@id/question_number_submit8"
+                    android:layout_toEndOf="@id/question_number_submit8"
 
                     />
 
                 <RadioGroup
-                    android:id="@+id/radioGroup8"
+                    android:id="@+id/radioGroup8_exam_taking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_text_widget8"
+                    android:layout_below="@id/question_text_submit8"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -446,7 +440,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/question_number_widget9"
+                    android:id="@+id/question_number_submit9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -455,21 +449,20 @@
                     android:text="Q9\"
                     android:textSize="20dp" />
 
-                <EditText
-                    android:id="@+id/question_text_widget9"
+                <TextView
+                    android:id="@+id/question_text_submit9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/question_number_widget9"
-                    android:layout_toEndOf="@id/question_number_widget9"
-                    android:hint="Enter Question here"
+                    android:layout_alignTop="@id/question_number_submit9"
+                    android:layout_toEndOf="@id/question_number_submit9"
 
                     />
 
                 <RadioGroup
-                    android:id="@+id/radioGroup9"
+                    android:id="@+id/radioGroup9_exam_taking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_text_widget9"
+                    android:layout_below="@id/question_text_submit9"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -498,7 +491,7 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/question_number_widget10"
+                    android:id="@+id/question_number_submit10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -507,21 +500,20 @@
                     android:text="Q10\"
                     android:textSize="20dp" />
 
-                <EditText
-                    android:id="@+id/question_text_widget10"
+                <TextView
+                    android:id="@+id/question_text_submit10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/question_number_widget10"
-                    android:layout_toEndOf="@id/question_number_widget10"
-                    android:hint="Enter Question here"
+                    android:layout_alignTop="@id/question_number_submit10"
+                    android:layout_toEndOf="@id/question_number_submit10"
 
                     />
 
                 <RadioGroup
-                    android:id="@+id/radioGroup10"
+                    android:id="@+id/radioGroup10_exam_taking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/question_text_widget10"
+                    android:layout_below="@id/question_text_submit10"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
@@ -542,7 +534,13 @@
 
             </RelativeLayout>
 
-
+            <Button
+                android:id="@+id/submit_exam_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Submit"
+                android:textSize="20dp" />
         </LinearLayout>
     </ScrollView>
 

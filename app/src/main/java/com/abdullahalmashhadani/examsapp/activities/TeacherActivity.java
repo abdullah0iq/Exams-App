@@ -22,6 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 public class TeacherActivity extends AppCompatActivity implements RecycleViewInterface {
+
     FloatingActionButton fab;
     MyDatabaseHelper db;
     ArrayList<Exam> exams;
@@ -32,7 +33,7 @@ public class TeacherActivity extends AppCompatActivity implements RecycleViewInt
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_teacher);
-        recyclerView = findViewById(R.id.rvExams);
+
         fab = findViewById(R.id.new_exam_floating_button);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,31 +43,34 @@ public class TeacherActivity extends AppCompatActivity implements RecycleViewInt
 
             }
         });
-        db = new MyDatabaseHelper(TeacherActivity.this);
-        exams = new ArrayList<>();
 
-
-        Cursor cursor = db.get_exams();
-        if (cursor != null) {
-            while (cursor.moveToNext()) {
-                @SuppressLint("Range") String title = cursor.getString(cursor.getColumnIndex("title"));
-                @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("_id"));
-                exams.add(new Exam(id,title, new ArrayList<Question>()));
-            }
-        }
-
-        ExamAdapter examAdapter = new ExamAdapter(this, TeacherActivity.this, exams);
-        recyclerView.setAdapter(examAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        loadData();
 
 
     }
 
+    protected void onResume() {
+
+        super.onResume();
+        loadData();
+    }
+
+    private void loadData() {
+        recyclerView = findViewById(R.id.rvExams);
+        db = new MyDatabaseHelper(TeacherActivity.this);
+        exams = new ArrayList<>();
+
+
+        exams = db.get_exams();
+
+
+        ExamAdapter examAdapter = new ExamAdapter(this, TeacherActivity.this, exams);
+        recyclerView.setAdapter(examAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
 
     @Override
     public void onExamClick(int pos) {
-        Intent intent = new Intent(TeacherActivity.this, NewExamActivity.class);
-        intent.putExtra("test", "it is working");
-        startActivity(intent);
+
     }
 }

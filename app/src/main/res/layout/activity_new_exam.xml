@@ -21,6 +21,17 @@
             tools:context=".activities.NewExamActivity"
 
             >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:padding="20dp">
+                <EditText
+                    android:id="@+id/new_exam_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Exam Title"/>
+            </androidx.cardview.widget.CardView>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -542,17 +553,16 @@
 
             </RelativeLayout>
 
-
+            <Button
+                android:id="@+id/save_new_exam_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save New Exam"
+                android:textSize="20dp"
+                android:layout_margin="20dp"/>
         </LinearLayout>
     </ScrollView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/save_new_exam_floating_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="24dp"
-        android:src="@drawable/add" />
+
 </RelativeLayout>
 

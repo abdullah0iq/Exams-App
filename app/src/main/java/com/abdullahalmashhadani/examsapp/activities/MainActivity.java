@@ -3,6 +3,8 @@ package com.abdullahalmashhadani.examsapp.activities;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
+import android.widget.Button;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -10,11 +12,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.abdullahalmashhadani.examsapp.MyDatabaseHelper;
 import com.abdullahalmashhadani.examsapp.R;
 
 public class MainActivity extends AppCompatActivity {
     CardView studentCard;
     CardView teacherCard;
+    Button empty_db_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +40,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         teacherCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent teacherActivityIntent = new Intent(MainActivity.this, TeacherActivity.class);
                 startActivity(teacherActivityIntent);
+            }
+        });
+        MyDatabaseHelper db = new MyDatabaseHelper(MainActivity.this);
+        empty_db_button = findViewById(R.id.delete_all_exams_button);
+        empty_db_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                db.emptyAllTables();
+
+
             }
         });
     }
